@@ -1,0 +1,3 @@
+[submodule "griffin"]
+	path = griffin
+	url = git@gitlab.software.inl.gov:idaholab/griffin

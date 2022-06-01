@@ -5,6 +5,7 @@
 #include "MooseSyntax.h"
 
 #include "OtherApp.h"
+#include "GriffinApp.h"
 
 InputParameters
 ExternalControlExampleApp::validParams()
@@ -31,6 +32,8 @@ ExternalControlExampleApp::registerAll(Factory & f, ActionFactory & af, Syntax &
   Registry::registerObjectsTo(f, {"ExternalControlExampleApp"});
   Registry::registerActionsTo(af, {"ExternalControlExampleApp"});
 
+  GriffinApp::registerAll(f, af, syntax);
+
   /* register custom execute flags, action syntax, etc. here */
 }
 
@@ -40,6 +43,7 @@ ExternalControlExampleApp::registerApps()
   registerApp(ExternalControlExampleApp);
 
   OtherApp::registerApps();
+  GriffinApp::registerApps();
 }
 
 /***************************************************************************************************
